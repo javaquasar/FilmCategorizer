@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
 
 /**
  *
@@ -34,6 +33,12 @@ public class Actor extends Model {
     private HairColor hairColor;
     @ManyToOne
     private FigureType figureType;
+    @Column(name = "photo_icon")
+    private byte[] photoIcon;
+    @Column(name = "photo_front")
+    private byte[] photoFront;
+    @Column(name = "photo_back")
+    private byte[] photoBack;
     @ManyToMany(mappedBy = "actors")
     private Set<Film> films;
 
@@ -124,6 +129,30 @@ public class Actor extends Model {
 
     public void setFigureType(FigureType figureType) {
         this.figureType = figureType;
+    }
+
+    public byte[] getPhotoIcon() {
+        return photoIcon;
+    }
+
+    public void setPhotoIcon(byte[] photoIcon) {
+        this.photoIcon = photoIcon;
+    }
+
+    public byte[] getPhotoFront() {
+        return photoFront;
+    }
+
+    public void setPhotoFront(byte[] photoFront) {
+        this.photoFront = photoFront;
+    }
+
+    public byte[] getPhotoBack() {
+        return photoBack;
+    }
+
+    public void setPhotoBack(byte[] photoBack) {
+        this.photoBack = photoBack;
     }
 
     public Set<Film> getFilms() {

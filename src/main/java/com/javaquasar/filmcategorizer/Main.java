@@ -9,5 +9,6 @@ import com.javaquasar.filmcategorizer.dao.hiber.HibernateUtil;
 public class Main {
     public static void main(String[] args) {
         HibernateUtil.getSessionFactory();
+        System.exit(0);
     }
 }
