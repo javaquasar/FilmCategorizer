@@ -72,7 +72,7 @@ public class HibernateUtil {
                 put("hibernate.default_schema", "PUBLIC");
 
                 put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-                put("hibernate.hbm2ddl.auto", "update"); // update create create-drop
+                put("hibernate.hbm2ddl.auto", "create"); // update create create-drop
                 put("connection.pool_size", "1");
                 put("cache.provider_class", "org.hibernate.cache.internal.NoCacheProvider");
                 put("show_sql", "true");

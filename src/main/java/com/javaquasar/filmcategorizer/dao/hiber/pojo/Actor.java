@@ -25,6 +25,8 @@ public class Actor extends Model {
     @Column(name = "birthday")
     //@Temporal(javax.persistence.TemporalType.DATE)
     private Date birthday;
+    @Column(name = "rating")
+    private int rating;
     @ManyToOne
     private Country country;
     @ManyToOne
@@ -52,6 +54,7 @@ public class Actor extends Model {
     public Actor(String name, 
             String abbr, 
             Sex sex, 
+            int rating,
             Date birthday, 
             Country country, 
             Nationality nationality, 
@@ -60,6 +63,7 @@ public class Actor extends Model {
         this.name = name;
         this.abbr = abbr;
         this.sex = sex;
+        this.rating = rating;
         this.birthday = birthday;
         this.country = country;
         this.nationality = nationality;
@@ -89,6 +93,14 @@ public class Actor extends Model {
 
     public void setSex(Sex sex) {
         this.sex = sex;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
     public Date getBirthday() {
