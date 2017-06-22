@@ -228,3 +228,18 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:/home/artur/
 	at org.h2.mvstore.FileStore.open(FileStore.java:173)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:348)
 	... 31 more
+2017-06-22 21:44:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PHOTO" not found; SQL statement:
+
+    alter table PUBLIC.photo 
+        drop constraint FK_pw2w5klitn5pibs9qo3wir632 if exists [42102-193]
+2017-06-22 21:44:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PHOTO_ACTOR" not found; SQL statement:
+
+    alter table PUBLIC.photo_actor 
+        drop constraint FK_511ewhy3ahimyn6om1miova0b if exists [42102-193]
+2017-06-22 21:44:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PHOTO_ACTOR" not found; SQL statement:
+
+    alter table PUBLIC.photo_actor 
+        drop constraint FK_6d6ejav0lrvufn8o10gd88tw if exists [42102-193]

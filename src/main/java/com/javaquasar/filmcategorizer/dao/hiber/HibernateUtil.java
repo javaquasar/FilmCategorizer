@@ -57,6 +57,8 @@ public class HibernateUtil {
                 .addAnnotatedClass(Nationality.class)
                 .addAnnotatedClass(HairColor.class)
                 .addAnnotatedClass(FigureType.class)
+                .addAnnotatedClass(PhotoType.class)
+                .addAnnotatedClass(Photo.class)
                 .addAnnotatedClass(Actor.class)
                 .addAnnotatedClass(Studio.class)
                 .addAnnotatedClass(Genre.class)

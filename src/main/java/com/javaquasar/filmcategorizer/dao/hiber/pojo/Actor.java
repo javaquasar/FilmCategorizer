@@ -35,6 +35,8 @@ public class Actor extends Model {
     private HairColor hairColor;
     @ManyToOne
     private FigureType figureType;
+    @ManyToMany(mappedBy = "actors")
+    private Set<Photo> photos;
     @Column(name = "photo_icon")
     private byte[] photoIcon;
     @Column(name = "photo_front")
@@ -173,6 +175,14 @@ public class Actor extends Model {
 
     public void setFilms(Set<Film> films) {
         this.films = films;
+    }
+
+    public Set<Photo> getPhotos() {
+        return photos;
+    }
+
+    public void setPhotos(Set<Photo> photos) {
+        this.photos = photos;
     }
 
 }
